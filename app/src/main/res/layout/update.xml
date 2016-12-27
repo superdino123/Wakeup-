@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"  >
+        <TextView
+            android:layout_marginLeft="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff00ff"
+            android:text="日期:\t" 	/>
+        <TextView
+            android:id="@+id/Tview_date"
+            android:layout_marginLeft="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" 	/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"  >
+        <TextView
+            android:layout_marginLeft="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff00ff"
+            android:text="标题:\t" 	/>
+        <EditText
+            android:id="@+id/Txt_title"
+            android:layout_marginLeft="10px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" 	/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginLeft="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff00ff"
+        android:text="详细内容:  " 	/>
+    <EditText
+        android:id="@+id/Txt_remark"
+        android:layout_marginLeft="10px"
+        android:layout_width="match_parent"
+        android:layout_height="250dip"
+        android:gravity="top"
+        android:text="" 	/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"  >
+        <Button
+            android:id="@+id/btn_update2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"  />
+        <Button
+            android:id="@+id/btn_return2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"  />
+    </LinearLayout>
+</LinearLayout>

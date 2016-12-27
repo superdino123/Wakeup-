@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请填写日记标题："    	/>
+    <EditText
+        android:id="@+id/Txt_title"
+        android:layout_marginLeft="10px"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:text="" 	/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请填写日记内容："  />"
+    <EditText
+        android:id="@+id/Txt_remark"
+        android:layout_marginLeft="10px"
+        android:layout_width="match_parent"
+        android:layout_height="260dip"
+        android:gravity="top"
+        android:text="" 	/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"  >
+        <Button
+            android:id="@+id/btn_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加到日记本"  />
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清空"  />
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"  />
+    </LinearLayout>
+
+</LinearLayout>
