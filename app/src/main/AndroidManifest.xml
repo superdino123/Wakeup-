@@ -61,6 +61,13 @@
             </intent-filter>
 
         </activity>
+
+        <!--备忘录-->
+        <activity android:name="diary.DiaryTextActivity" />
+        <activity android:name="diary.DiaryDetailActivity" />
+        <activity android:name="diary.InsertDiaryActivity" />
+        <activity android:name="diary.UpdateDiaryActivity" />
+        <!--备忘录-->
     </application>
 
 </manifest>
