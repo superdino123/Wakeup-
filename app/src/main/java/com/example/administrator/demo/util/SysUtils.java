@@ -127,7 +127,7 @@ public class SysUtils {
         try {
             applicationInfo = packageManager.getApplicationInfo(context.getPackageName(), 0);
         } catch (Exception e) {
-            return "小Q聊天机器人";
+            return "起来嗨";
         }
         return String.valueOf(packageManager.getApplicationLabel(applicationInfo));
     }
@@ -163,19 +163,19 @@ public class SysUtils {
      * 创建文件夹
      */
     public static void initFiles() {
-        File file = new File(Environment.getExternalStorageDirectory(), "qrobot/data");
+        File file = new File(Environment.getExternalStorageDirectory(), "wakeup/data");
         if (!file.exists())
             file.mkdirs();
-        file = new File(Environment.getExternalStorageDirectory(), "qrobot/images/upload");
+        file = new File(Environment.getExternalStorageDirectory(), "wakeup/images/upload");
         if (!file.exists())
             file.mkdirs();
-        file = new File(Environment.getExternalStorageDirectory(), "qrobot/images/cache");
+        file = new File(Environment.getExternalStorageDirectory(), "wakeup/images/cache");
         if (!file.exists())
             file.mkdirs();
-        file = new File(Environment.getExternalStorageDirectory(), "qrobot/download");
+        file = new File(Environment.getExternalStorageDirectory(), "wakeup/download");
         if (!file.exists())
             file.mkdirs();
-        file = new File(Environment.getExternalStorageDirectory(), "qrobot/voice");
+        file = new File(Environment.getExternalStorageDirectory(), "wakeup/voice");
         if (!file.exists())
             file.mkdirs();
     }

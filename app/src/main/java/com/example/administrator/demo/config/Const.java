@@ -5,9 +5,9 @@ import android.os.Environment;
 
 public class Const {
 
-    public static final String FILE_IMG_CACHE = Environment.getExternalStorageDirectory() + "/qrobot/images/cache/";
-    public static final String FILE_VOICE_CACHE = Environment.getExternalStorageDirectory() + "/qrobot/voice/";
-    public static final String FILE_DOWNLOAD = Environment.getExternalStorageDirectory() + "/qrobot/download/";
+    public static final String FILE_IMG_CACHE = Environment.getExternalStorageDirectory() + "/wakeup/images/cache/";
+    public static final String FILE_VOICE_CACHE = Environment.getExternalStorageDirectory() + "/wakeup/voice/";
+    public static final String FILE_DOWNLOAD = Environment.getExternalStorageDirectory() + "/wakeup/download/";
 
     public static final String XF_VOICE_APPID="573945a6";//讯飞语音appid
     public static final String XF_AD_APPID="573a6ddc";//讯飞广告appid

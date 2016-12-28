@@ -14,9 +14,6 @@ import android.widget.Toast;
 
 import com.example.administrator.demo.R;
 
-/**
- * Created by Administrator on 2016/12/27.
- */
 public class ToastUtil {
 
     private static Toast mToast;

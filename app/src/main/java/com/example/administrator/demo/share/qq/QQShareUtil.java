@@ -3,9 +3,8 @@ package com.example.administrator.demo.share.qq;
 import android.app.Activity;
 import android.os.Bundle;
 
-import  com.example.administrator.demo.share.ShareContent;
-import  com.example.administrator.demo.util.SysUtils;
-
+import com.example.administrator.demo.share.ShareContent;
+import com.example.administrator.demo.util.SysUtils;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzoneShare;
 import com.tencent.tauth.IUiListener;

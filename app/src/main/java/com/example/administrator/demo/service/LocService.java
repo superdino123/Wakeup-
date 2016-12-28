@@ -24,13 +24,8 @@ import com.example.administrator.demo.util.LogUtil;
 import com.example.administrator.demo.util.PreferencesUtils;
 
 //百度API
-
-
-
 /**
  * 后台定位Service
- * @author 白玉梁
- * @date 2015-7-6 下午3:15:30
  */
 public class LocService extends Service {
 
@@ -99,8 +94,6 @@ public class LocService extends Service {
     /**
      * 定位监听
      *
-     * @author 白玉梁
-     * @date 2015-7-6 下午3:18:45
      */
     public class MyLocationListenner implements BDLocationListener {
 
