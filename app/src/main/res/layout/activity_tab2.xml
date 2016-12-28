@@ -8,7 +8,7 @@
 
     <include layout="@layout/common_title_layout" />
 
-    <com.byl.qrobot.view.MyScrollView
+    <com.example.administrator.demo.view.MyScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/title_bar"
@@ -23,7 +23,7 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-            <com.byl.qrobot.view.CircleImageView
+            <com.example.administrator.demo.view.CircleImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/miniq_logo" />
@@ -64,7 +64,7 @@
                 android:textSize="14sp" />
 
         </LinearLayout>
-    </com.byl.qrobot.view.MyScrollView>
+    </com.example.administrator.demo.view.MyScrollView>
 
     <LinearLayout
         android:id="@+id/ll_ad"
