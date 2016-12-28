@@ -18,9 +18,12 @@ import android.widget.Toast;
 import com.example.administrator.demo.R;
 import com.example.administrator.demo.service.LocService;
 import com.example.administrator.demo.ui.tab.tab1.Tab1Activity;
-import com.example.administrator.demo.ui.tab.tab2.Tab2Activity;
 import com.example.administrator.demo.ui.tab.tab3.Tab3Activity;
 import com.example.administrator.demo.util.SystemBarTintManager;
+
+import diary.DiaryTextActivity;
+
+import static com.example.administrator.demo.R.id.rb_tab2;
 
 /**
  * 主程序
@@ -29,7 +32,7 @@ import com.example.administrator.demo.util.SystemBarTintManager;
 public class MainActivity extends TabActivity implements CompoundButton.OnCheckedChangeListener {
 
     private TabHost mTabHost,mainTabHost;
-    private RadioButton rb_tab1, rb_tab2,rb_tab3;
+    private RadioButton rb_tab1, diarylist,rb_tab3;
     private Intent intent;
 
 
@@ -53,11 +56,11 @@ public class MainActivity extends TabActivity implements CompoundButton.OnChecke
 
         //添加选项卡
         rb_tab1 = (RadioButton) this.findViewById(R.id.rb_tab1);
-        rb_tab2 = (RadioButton) this.findViewById(R.id.rb_tab2);
+        diarylist = (RadioButton) this.findViewById(rb_tab2);
         rb_tab3 = (RadioButton) this.findViewById(R.id.rb_tab3);
 
         rb_tab1.setOnCheckedChangeListener(this);
-        rb_tab2.setOnCheckedChangeListener(this);
+        diarylist.setOnCheckedChangeListener(this);
         rb_tab3.setOnCheckedChangeListener(this);
 
     }
@@ -68,7 +71,7 @@ public class MainActivity extends TabActivity implements CompoundButton.OnChecke
         mainTabHost = this.mTabHost;
         intent = new Intent().setClass(this, Tab1Activity.class);
         mainTabHost.addTab(buildTabSpec("tab1", null, intent));
-        intent = new Intent().setClass(this, Tab2Activity.class);
+        intent = new Intent().setClass(this, DiaryTextActivity.class);
         mainTabHost.addTab(buildTabSpec("tab2", null, intent));
         intent = new Intent().setClass(this, Tab3Activity.class);
         mainTabHost.addTab(buildTabSpec("tab3", null, intent));

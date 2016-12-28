@@ -1,6 +1,7 @@
 package diary;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -41,7 +42,7 @@ public class InsertDiaryActivity extends Activity{
             {
 
                 if(TxtTitle.getText().toString().trim().equals("")){
-                    Toast.makeText(InsertDiaryActivity.this,"日记标题不能为空，请填写标题", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InsertDiaryActivity.this,"备忘标题不能为空，请填写标题", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Calendar currentTime = Calendar.getInstance();
@@ -53,9 +54,13 @@ public class InsertDiaryActivity extends Activity{
                         +"-"+String.valueOf(month)+"-"+String.valueOf(day)
                         +"','"+TxtTitle.getText()+"','"+TxtRemark.getText()+"');";
                 dbWrite.execSQL(sql);
-                Toast.makeText(InsertDiaryActivity.this,"新日记添加成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(InsertDiaryActivity.this,"新备忘添加成功", Toast.LENGTH_SHORT).show();
                 TxtRemark.setText("");
                 TxtTitle.setText("");
+                Intent intent = new Intent();
+                intent.setAction("action.refreshFriend");
+                sendBroadcast(intent);
+                finish();
             }
         });
         BtnClear.setOnClickListener(new View.OnClickListener()

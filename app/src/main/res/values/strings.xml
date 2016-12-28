@@ -2,7 +2,22 @@
     <string name="app_name">起来嗨</string>
 
     <string name="tab1">闹钟</string>
-    <string name="tab2">日志</string>
+    <string name="tab2">日记</string>
     <string name="tab3">我的</string>
 
+
+    <string name="header_text">日记本</string>
+    <string name="header_text2">Write down the happy things every day</string>
+    <string name="diary_title">标题</string>
+    <string name="diary_time">时间</string>
+    <string name="diary_text">内容</string>
+    <string name="diary_insert">添加</string>
+    <string name="diary_wrtting">Writting</string>
+    <string name="diary_insert_icon">+</string>
+    <string name="diary_insert_title">请填写日记标题</string>
+    <string name="diary_insert_text">请填写日记内容</string>
+    <string name="diary_update_text">修改日记</string>
+    <string name="diary_drop_text">删除日记</string>
+    <string name="diary_finish">修改完成</string>
+    <string name="diary_back_icon">></string>
 </resources>

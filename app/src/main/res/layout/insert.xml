@@ -4,47 +4,94 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    />
-    <TextView
-        android:layout_width="wrap_content"
+    <include layout="@layout/common_title_layout" />
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="请填写日记标题："    	/>
-    <EditText
-        android:id="@+id/Txt_title"
-        android:layout_marginLeft="10px"
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:text="" 	/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="viewEnd"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp">
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="47.33333333333333dp"
+            android:layout_gravity="right"
+            android:background="@drawable/back"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:text=""  />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="请填写日记内容："  />"
-    <EditText
-        android:id="@+id/Txt_remark"
-        android:layout_marginLeft="10px"
-        android:layout_width="match_parent"
-        android:layout_height="260dip"
-        android:gravity="top"
-        android:text="" 	/>
+        android:gravity="left"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:text="@string/diary_insert_title"
+            android:textColor="#448AFF"/>
+        <EditText
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/Txt_title"
+            android:textColor="#448AFF"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="left"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:text="@string/diary_insert_text"
+            android:textColor="#448AFF"/>
+        <EditText
+
+            android:background="@null"
+            android:gravity="top"
+            android:layout_height="300dp"
+            android:layout_width="200dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/Txt_remark"
+            android:textColor="#448AFF"/>
+    </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"  >
+
         <Button
             android:id="@+id/btn_insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="添加到日记本"  />
+            android:background="#00000000"
+            android:text="@string/diary_insert"
+            android:textColor="#448AFF"/>
         <Button
             android:id="@+id/btn_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="清空"  />
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="返回"  />
+            android:background="#00000000"
+            android:text="清空"
+            android:textColor="#448AFF"/>
     </LinearLayout>
 
 </LinearLayout>

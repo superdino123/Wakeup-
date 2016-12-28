@@ -1,6 +1,7 @@
 package diary;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -57,7 +58,10 @@ public class UpdateDiaryActivity extends Activity{
                         +"',remark='"+txt_remark.getText()+"' where _id="+selectedid;
                 dbWrite.execSQL(sql);
                 Toast.makeText(UpdateDiaryActivity.this,"日记修改成功", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent();
+                intent.setAction("action.refreshFriend");
+                sendBroadcast(intent);
+                finish();
             }
         });
 

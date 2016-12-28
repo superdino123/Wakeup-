@@ -12,12 +12,13 @@ import android.widget.Toast;
 
 import com.example.administrator.demo.R;
 
+
 /**
  * Created by Administrator on 2016/12/27.
  */
 
 public class DiaryDetailActivity extends Activity{
-    private TextView ID,date,title,remark;
+    private TextView date,title,remark;
     private Button Btn_update,Btn_delete,Btn_return;
     private SQLiteDatabase dbRead,dbWrite;;
     private String idStr,dateStr,titleStr,remarkStr,selectedid;
@@ -28,8 +29,8 @@ public class DiaryDetailActivity extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.diarytext);
-        this.setTitle("查看日记详细内容");
-        ID = (TextView) findViewById(R.id.Tv_id);
+        this.setTitle("查看备忘详细内容");
+        /*ID = (TextView) findViewById(R.id.Tv_id);*/
         date = (TextView) findViewById(R.id.Tv_date);
         title = (TextView) findViewById(R.id.Txt_title);
         remark = (TextView) findViewById(R.id.Txt_remark);
@@ -42,11 +43,11 @@ public class DiaryDetailActivity extends Activity{
 
         result=dbRead.rawQuery( "select _id, date, title,remark from tb_diary where _id="+selectedid, null);
         result.moveToNext();
-        idStr=String.valueOf(result.getInt(result.getColumnIndex("_id")));
+        /*idStr=String.valueOf(result.getInt(result.getColumnIndex("_id")));*/
         dateStr=result.getString(result.getColumnIndex("date"));
         titleStr=result.getString(result.getColumnIndex("title"));
         remarkStr=result.getString(result.getColumnIndex("remark"));
-        ID.setText(idStr);
+        /*ID.setText(idStr);*/
         date.setText(dateStr);
         title.setText(titleStr);
         remark.setText(remarkStr);
@@ -69,8 +70,11 @@ public class DiaryDetailActivity extends Activity{
                 dbWrite= dbHelper.getWritableDatabase();
                 String sql="delete from tb_diary where _id="+selectedid;
                 dbWrite.execSQL(sql);
-                Toast.makeText(DiaryDetailActivity.this,"日记删除成功", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(DiaryDetailActivity.this,"备忘删除成功", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setAction("action.refreshFriend");
+                sendBroadcast(intent);
+                finish();
             }
         });
         Btn_return.setOnClickListener(new View.OnClickListener()
